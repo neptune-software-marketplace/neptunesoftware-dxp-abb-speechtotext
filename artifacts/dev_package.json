@@ -1,0 +1,47 @@
+{
+	"id": "0C28F909-0F0C-ED11-B47A-000D3AB2359F",
+	"createdAt": "2022-07-25T11:43:45.976Z",
+	"createdBy": "kristin.eliassen@neptune-software.com",
+	"git": {
+		"targetServers": [],
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-speechtotext",
+		"testServers": []
+	},
+	"name": "neptunesoftware-dxp-abb-speechtotext",
+	"description": null,
+	"ver": "22.7.25.1144",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "71F0575D-A4A9-4301-B015-BEE686BC2D00",
+			"ver": "22.7.25.1343",
+			"application": "speech_to_text",
+			"title": "UTIL",
+			"description": "Chatbot - Voice to Text"
+		}
+	],
+	"api": [],
+	"odataMock": [],
+	"odataSource": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"wf_definition": [],
+	"department": [],
+	"script_scheduler": [],
+	"connector": []
+}

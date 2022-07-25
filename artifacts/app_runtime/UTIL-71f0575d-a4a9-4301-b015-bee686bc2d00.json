@@ -1,0 +1,228 @@
+{
+	"id": "71f0575d-a4a9-4301-b015-bee686bc2d00",
+	"createdAt": "2022-02-04T15:47:15.213Z",
+	"updatedAt": "2022-07-25T11:43:54.963Z",
+	"createdBy": "luuk.wosten@neptune-software.com",
+	"changedBy": "kristin.eliassen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "2fade47e-e749-4165-f5e2-76d07217a44c",
+			"fieldName": "barContent",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Bar",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "position",
+					"grouping": "Parent",
+					"value": "addContent",
+					"script": "",
+					"translation": []
+				}
+			],
+			"data": [
+				{
+					"fieldNo": "bac400cd-2ae9-40ea-db1f-54d64e7cb8d3",
+					"fieldName": "Right",
+					"fieldParent": "2fade47e-e749-4165-f5e2-76d07217a44c",
+					"fieldType": "neptune.BarContent",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "ContentRight",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "764e38e8-0131-4538-f0da-6f0e73a0b3a6",
+							"fieldName": "btnSpeak",
+							"fieldParent": "bac400cd-2ae9-40ea-db1f-54d64e7cb8d3",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "type",
+									"grouping": "Properties",
+									"value": "Emphasized",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "icon",
+									"grouping": "Properties",
+									"value": "sap-icon://microphone",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "checkPermission();",
+									"script": "checkPermission();",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "9abe6485-0be2-48fb-a7f5-ff3c04b98d07",
+					"fieldName": "Middle",
+					"fieldParent": "2fade47e-e749-4165-f5e2-76d07217a44c",
+					"fieldType": "neptune.BarContent",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "ContentMiddle",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "51156d17-c730-4424-f889-52b7acaf67d2",
+							"fieldName": "inpText",
+							"fieldParent": "9abe6485-0be2-48fb-a7f5-ff3c04b98d07",
+							"fieldType": "sap.m.Input",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "placeholder",
+									"grouping": "Properties",
+									"value": "text input or speak",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "968e2c24-31f9-4517-e622-f12491f600a9",
+					"fieldName": "VoiceRecognition",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"var hasPermission = false;",
+						"",
+						"function checkPermission() {",
+						"",
+						"    // Check if has permission to use the microphone",
+						"    window.plugins.speechRecognition.hasPermission(function(isGranted) {",
+						"        if (isGranted) {",
+						"            startRecognition();",
+						"            // hasPermission = true;",
+						"",
+						"        } else {",
+						"            // Request the permission",
+						"            window.plugins.speechRecognition.requestPermission(function() {",
+						"                // Request accepted, start recognition",
+						"                startRecognition();",
+						"                // hasPermission = true;",
+						"            }, function(err) {",
+						"                console.log(err);",
+						"                // hasPermission = false;",
+						"            });",
+						"        }",
+						"    }, function(err) {",
+						"        console.log(err);",
+						"        hasPermission = false;",
+						"    });",
+						"",
+						"}",
+						"",
+						"",
+						"function startRecognition() {",
+						"    var settings = {",
+						"        lang: \"en-US\",",
+						"        showPopup: true",
+						"    };",
+						"",
+						"    window.plugins.speechRecognition.startListening(function(result) {",
+						"        console.log(result);",
+						"        // By default just 5 options",
+						"        // [\"Hello\",\"Hallou\", \"Hellou\" ...]",
+						"        inpText.setValue(result[0]);",
+						"    }, function(err) {",
+						"        console.log(err);",
+						"    }, settings);",
+						"}",
+						"",
+						"function stopRecognition() {",
+						"    window.plugins.speechRecognition.stopListening(function() {",
+						"        // No more recognition",
+						"    }, function(err) {",
+						"        console.log(err);",
+						"    });",
+						"}"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "22.7.25.1343",
+	"application": "speech_to_text",
+	"title": "UTIL",
+	"description": "Chatbot - Voice to Text",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "C",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"apis": []
+}
