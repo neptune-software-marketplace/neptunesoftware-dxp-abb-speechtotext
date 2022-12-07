@@ -1,0 +1,52 @@
+var hasPermission = false;
+
+function checkPermission() {
+
+    // Check if has permission to use the microphone
+    window.plugins.speechRecognition.hasPermission(function(isGranted) {
+        if (isGranted) {
+            startRecognition();
+            // hasPermission = true;
+
+        } else {
+            // Request the permission
+            window.plugins.speechRecognition.requestPermission(function() {
+                // Request accepted, start recognition
+                startRecognition();
+                // hasPermission = true;
+            }, function(err) {
+                console.log(err);
+                // hasPermission = false;
+            });
+        }
+    }, function(err) {
+        console.log(err);
+        hasPermission = false;
+    });
+
+}
+
+
+function startRecognition() {
+    var settings = {
+        lang: "en-US",
+        showPopup: true
+    };
+
+    window.plugins.speechRecognition.startListening(function(result) {
+        console.log(result);
+        // By default just 5 options
+        // ["Hello","Hallou", "Hellou" ...]
+        inpText.setValue(result[0]);
+    }, function(err) {
+        console.log(err);
+    }, settings);
+}
+
+function stopRecognition() {
+    window.plugins.speechRecognition.stopListening(function() {
+        // No more recognition
+    }, function(err) {
+        console.log(err);
+    });
+}

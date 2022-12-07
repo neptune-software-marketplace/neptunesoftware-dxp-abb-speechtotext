@@ -1,5 +1,5 @@
 {
-	"id": "0C28F909-0F0C-ED11-B47A-000D3AB2359F",
+	"id": "0c28f909-0f0c-ed11-b47a-000d3ab2359f",
 	"createdAt": "2022-07-25T11:43:45.976Z",
 	"createdBy": "kristin.eliassen@neptune-software.com",
 	"git": {
@@ -13,16 +13,15 @@
 	"enableCICD": true,
 	"apps": [
 		{
-			"id": "71F0575D-A4A9-4301-B015-BEE686BC2D00",
-			"ver": "22.7.25.1343",
+			"id": "71f0575d-a4a9-4301-b015-bee686bc2d00",
 			"application": "speech_to_text",
 			"title": "UTIL",
 			"description": "Chatbot - Voice to Text"
 		}
 	],
 	"api": [],
-	"odataMock": [],
 	"odataSource": [],
+	"odataMock": [],
 	"dictionary": [],
 	"jsclass": [],
 	"jsscript_group": [],
@@ -40,8 +39,9 @@
 	"systems": [],
 	"doc": [],
 	"wf_notifications": [],
-	"wf_definition": [],
 	"department": [],
 	"script_scheduler": [],
-	"connector": []
+	"wf_definition": [],
+	"connector": [],
+	"events": []
 }

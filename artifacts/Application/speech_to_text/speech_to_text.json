@@ -1,0 +1,359 @@
+{
+	"id": "71f0575d-a4a9-4301-b015-bee686bc2d00",
+	"createdAt": "2022-02-04T15:47:15.213Z",
+	"createdBy": "luuk.wosten@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "2fade47e-e749-4165-f5e2-76d07217a44c",
+			"fieldName": "barContent",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Bar",
+			"script": "",
+			"customComponent": false,
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "position",
+					"grouping": "Parent",
+					"value": "addContent",
+					"script": "",
+					"translation": []
+				}
+			],
+			"data": [
+				{
+					"fieldNo": "bac400cd-2ae9-40ea-db1f-54d64e7cb8d3",
+					"fieldName": "Right",
+					"fieldParent": "2fade47e-e749-4165-f5e2-76d07217a44c",
+					"fieldType": "neptune.BarContent",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "ContentRight",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "764e38e8-0131-4538-f0da-6f0e73a0b3a6",
+							"fieldName": "btnSpeak",
+							"fieldParent": "bac400cd-2ae9-40ea-db1f-54d64e7cb8d3",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "type",
+									"grouping": "Properties",
+									"value": "Emphasized",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "icon",
+									"grouping": "Properties",
+									"value": "sap-icon://microphone",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "checkPermission();",
+									"script": "checkPermission();",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "9abe6485-0be2-48fb-a7f5-ff3c04b98d07",
+					"fieldName": "Middle",
+					"fieldParent": "2fade47e-e749-4165-f5e2-76d07217a44c",
+					"fieldType": "neptune.BarContent",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "ContentMiddle",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "51156d17-c730-4424-f889-52b7acaf67d2",
+							"fieldName": "inpText",
+							"fieldParent": "9abe6485-0be2-48fb-a7f5-ff3c04b98d07",
+							"fieldType": "sap.m.Input",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "width",
+									"grouping": "Properties",
+									"value": "20rem",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "placeholder",
+									"grouping": "Properties",
+									"value": "text input or speak (Work with a mobile client)",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": "4e48a8c8-3a83-48b8-fe18-3dbe6b72a82e",
+			"fieldName": "oBarContent",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Bar",
+			"script": "",
+			"customComponent": false,
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "position",
+					"grouping": "Parent",
+					"value": "addContent",
+					"script": "",
+					"translation": []
+				}
+			],
+			"data": [
+				{
+					"fieldNo": "ac4a0517-fe2a-4211-85ac-2740fc6cc298",
+					"fieldName": "Middle",
+					"fieldParent": "4e48a8c8-3a83-48b8-fe18-3dbe6b72a82e",
+					"fieldType": "neptune.BarContent",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "ContentMiddle",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "17dcd038-adf3-428d-bb77-67d05eeeadd8",
+							"fieldName": "oInput",
+							"fieldParent": "ac4a0517-fe2a-4211-85ac-2740fc6cc298",
+							"fieldType": "sap.m.Input",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "width",
+									"grouping": "Properties",
+									"value": "20rem",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "placeholder",
+									"grouping": "Properties",
+									"value": "text input or speak (Works in certain broswers)",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "66222fda-9c9b-4273-9a03-89cba86a839a",
+					"fieldName": "Right",
+					"fieldParent": "4e48a8c8-3a83-48b8-fe18-3dbe6b72a82e",
+					"fieldType": "neptune.BarContent",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "ContentRight",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "afba2ec3-b00c-4c77-e7a0-97a5f94ade17",
+							"fieldName": "oButtonVoiceToText",
+							"fieldParent": "66222fda-9c9b-4273-9a03-89cba86a839a",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Start",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": "file://event/sap.m.Button/oButtonVoiceToText/press.script",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "8f4718c3-20d4-40a1-9435-5d7d88629739",
+							"fieldName": "oButtonVoiceToTextStop",
+							"fieldParent": "66222fda-9c9b-4273-9a03-89cba86a839a",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Stop",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": "file://event/sap.m.Button/oButtonVoiceToTextStop/press.script",
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "c1503ecf-c8e6-4196-bad3-bacd2a94d566",
+					"fieldName": "README",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": "file://script/neptune.Script/README.script",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "0a3c3505-37f9-4bf0-bcca-282f1b9d14d3",
+					"fieldName": "VoiceRecognitionBrowser",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": "file://script/neptune.Script/VoiceRecognitionBrowser.script",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "968e2c24-31f9-4517-e622-f12491f600a9",
+					"fieldName": "VoiceRecognitionMobileClient",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": "file://script/neptune.Script/VoiceRecognitionMobileClient.script",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"componentInterface": [],
+	"ver": "22.12.7.1723",
+	"application": "speech_to_text",
+	"title": "UTIL",
+	"description": "Chatbot - Voice to Text",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "C",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"ui5_url": "",
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"ui5_ionic": false,
+	"useV2AppHandler": false,
+	"compilerTarget": 3,
+	"apis": [],
+	"package": "0c28f909-0f0c-ed11-b47a-000d3ab2359f"
+}

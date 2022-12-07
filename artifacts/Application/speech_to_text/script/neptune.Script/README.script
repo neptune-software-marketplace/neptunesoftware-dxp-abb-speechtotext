@@ -1,0 +1,4 @@
+// There are two bars since the first works if the app is running through a mobile client and the second will run either on desktop 
+// or mobile (check your browser first).
+
+// The text will be displayed into the corresponding input.
